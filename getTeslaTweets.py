@@ -31,7 +31,6 @@ for day in pd.date_range(sdate,edate-timedelta(days=1),freq='d').tolist():
 
 
 
-    output_file_name = 'results_' + params['fromDate']#str(datetime.now()).replace(' ', '_').replace(':', '').split('.')[0]
-
+    output_file_name = 'results_' + params['fromDate']
     with open('data/' + output_file_name + '.json', 'w') as output_file:
         json.dump(data, output_file)
